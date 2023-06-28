@@ -1,15 +1,17 @@
 {
-  "name": "gulp-boilerplate",
+  "name": "MyBike",
   "version": "1.0.0",
-  "description": "Frontend boilerplate based on gulp",
+  "description": "Landing Page",
   "main": "index.js",
+  "homepage": "https://voronevska.github.io/MyBike__Landing-Page/",
   "scripts": {
     "init": "mate-scripts init",
     "start": "mate-scripts start",
     "lint": "mate-scripts lint",
     "test:only": "mate-scripts test",
     "build": "mate-scripts build",
-    "deploy": "mate-scripts deploy",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "update": "mate-scripts update",
     "postinstall": "npm run update",
     "test": "npm run lint && npm run test:only"
